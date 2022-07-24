@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./CSS.css">
+    </head>
+    
+    <body>
+        
+        <div class="fourthProject">
+            <h1 class="game">Blackjack</h1>
+            <p id="message">Want to play a round?</p>
+            <p id="cards" class="cards">Cards: </p>
+            <p id="sum" class="sum">Sum: </p>
+
+            <button id="startButton" onclick="startGame()">START GAME</button>
+            <br>
+            <button id="cardButton" onclick="newCard()">NEW CARD</button>
+        </div>
+
+
+        <div class="firstProject">
+            <p class="text">Click the button to add one to the counter.</p>
+            <p>People entered:</p>
+            <p id="count">0</p>
+            <input class="button1" type="submit" value="Increment" onclick="increment()">
+            <br>
+            <input class="button1" type="submit" value="Save" onclick="save()">
+            <p id="passengerHistoryCount">Previous entries:</p>
+            <p id="totalPassengers">Total: </p>
+            <!-- <script src="./index.js"></script> -->
+    </div>
+        
+        <div class="secondProject">
+            <img src="./" width="100px" alt="Image of a Nike shoe">
+            <p>Nike shoe</p>
+            <button id="buy" onclick="purchase()">Purchase - $149</button>
+            <p id="error"></p>
+        </div>
+
+        <div class="thirdProject">
+            <span id="num1-el"></span>
+            <span id="num2-el"></span>
+            <br>
+            <button id="add" onclick="add()">Add</button>
+            <button id="subtract" onclick="subtract()">Subtract</button>
+            <button id="divide" onclick="divide()">Divide</button>
+            <button id="multiply" onclick="multiply()">Multiply</button>
+            <br>
+            <span id="result">Result: </span>
+        </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

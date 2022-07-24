@@ -1,0 +1,78 @@
+.button1, #buy, #add, #subtract, #divide, #multiply {
+    margin: 10px;
+    text-align: center;
+    color: #000000;
+    width: 5rem;
+    height: 1.8rem;
+    border-radius: 43px;
+    background: linear-gradient(145deg, #4ee6df, #5dffff);
+    box-shadow: 5px 5px 10px #46ccc6,
+    -5px -5px 10px #68ffff;
+    transition: all 0.7s;
+}
+
+.button1:hover, #buy:hover, #add:hover, #subtract:hover, #divide:hover, #multiply:hover {
+    margin: 10px;
+    text-align: center;
+    color: #000000;
+    width: 5rem;
+    height: 1.8rem;
+    border-radius: 43px;
+    background: linear-gradient(315deg, #4ee6df, #5dffff);
+    box-shadow: -5px -5px 10px #46ccc6,
+        5px 5px 10px #68ffff;
+}
+
+.text{
+    color: rgb(0, 157, 255);
+    text-shadow: #46ccc6;
+    font-size: 1.5rem;
+}
+
+.firstProject, .secondProject, .thirdProject, .fourthProject{
+    border: 5px solid #46ccc6;
+    margin: 10px;
+    padding: 10px;
+}
+
+#buy, #buy:hover{
+    /* border: 1px solid black; */
+    width: 120px;
+}
+
+#error{
+    color: red;
+    font-size: 1.5rem;
+}
+
+.game{
+    color: goldenrod;
+}
+
+.fourthProject{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    /* width: 60vw; */
+    /* margin: auto; */
+    background-color: #08ae32;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#message{
+    font-style: italic;
+}
+
+#startButton, #cardButton{
+    color: #016f32;
+    width: 150px;
+    background: goldenrod;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 7px;
+    border: none;
+    margin: 2px;
+} 
+
