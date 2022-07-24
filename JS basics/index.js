@@ -16,6 +16,7 @@ function save(){
     totalPassengers.textContent = "Total: " + total
     count = 0
     countPeople.innerText = count
+    // console.log("hello");
 }
 
 //secondProject
