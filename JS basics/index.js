@@ -88,7 +88,6 @@ function newCard(){
     console.log("Drawing a new card")
     let card = 7
     sum += card
-    renderGame()
-
+    renderGame() 
 }
 
