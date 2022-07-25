@@ -51,27 +51,43 @@ function multiply(){
 
 //fourthProject
 
-function randomCard(){
-    let card = Math.floor(Math.random() * 13) + 1
-    return card
-}
 
-let firstCard = randomCard()
-let secondCard = randomCard()
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard
-let blackjack = false
-let isAlive = true
+let hasBlackjack = false
+let isAlive = false
+let sum = 0
+let cards = []
 let message = ""
 let messageEl = document.getElementById("message")
 let sumEl = document.querySelector(".sum")
 let cardsEl = document.getElementById("cards")
 
+let playerName = "Yugal"
+let playerChips = 100
 
+let player = document.getElementById("player")
 
+player.textContent = playerName + ": " + "£" + playerChips
+
+function randomCard(){
+    let randomCard = Math.floor(Math.random() * 13) + 1
+    if (randomCard === 1) {
+        randomCard = 11
+    }
+    else if (randomCard > 10) {
+        randomCard = 10;
+    }
+    return randomCard
+}
 function startGame(){
+    isAlive = true;
+    let firstCard = randomCard()
+    let secondCard = randomCard()
+    let cards = [firstCard, secondCard]
+    let sum = firstCard + secondCard
     renderGame()
 }
+
+
 
 
 
@@ -86,21 +102,21 @@ function renderGame() {
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
     } else if (sum === 21) {
+        hasBlackjack = true
         message = "You got blackjack!"
-        blackjack = true
     } else{
-        message = "You're out of the game!"
         isAlive = false
+        message = "You're out of the game!"
     }
     messageEl.textContent = message
 }
 
 function newCard(){
-    console.log("Drawing a new card")
     let card = randomCard();
-    console.log(card);
-    sum += card
-    cards.push(card)
-    renderGame() 
+    if (!hasBlackjack && isAlive) {
+        cards.push(card)
+        sum += card
+        renderGame()
+    }
 }
 
