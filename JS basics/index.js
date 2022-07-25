@@ -50,8 +50,14 @@ function multiply(){
 
 
 //fourthProject
-let firstCard = 10
-let secondCard = 4
+
+function randomCard(){
+    let card = Math.floor(Math.random() * 13) + 1
+    return card
+}
+
+let firstCard = randomCard()
+let secondCard = randomCard()
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let blackjack = false
@@ -75,7 +81,7 @@ function renderGame() {
     for(let i = 0; i < cards.length; i++){
         cardsEl.textContent += cards[i] + " ";
     }
-    
+
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
@@ -91,21 +97,10 @@ function renderGame() {
 
 function newCard(){
     console.log("Drawing a new card")
-    let card = 7
+    let card = randomCard();
+    console.log(card);
     sum += card
     cards.push(card)
     renderGame() 
 }
-
-let sentence = ["Hello", "my", "name", "is", "Yugal"]
-let greetingEl = document.getElementById("greeting-el")
-
-for (let i = 0; i < sentence.length; i++) {
-    if (i != sentence.length - 1) {
-        greetingEl.textContent += sentence[i] + " ";
-    }
-    else {
-        greetingEl.textContent += sentence[i];
-    }
-    }
 
