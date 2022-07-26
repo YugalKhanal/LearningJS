@@ -49,24 +49,27 @@ function multiply(){
 }
 
 
-//fourthProject
+//!fourthProject
+let player = {
+    Name: "Yugal",
+    Chips: 100
+}
 
+player.sayHello()
 
+let cards = []
+let sum = 0
 let hasBlackjack = false
 let isAlive = false
-let sum = 0
-let cards = []
 let message = ""
 let messageEl = document.getElementById("message")
 let sumEl = document.querySelector(".sum")
 let cardsEl = document.getElementById("cards")
 
-let playerName = "Yugal"
-let playerChips = 100
 
-let player = document.getElementById("player")
+let playerEl = document.getElementById("player")
 
-player.textContent = playerName + ": " + "£" + playerChips
+playerEl.textContent = player.Name + ": " + "£" + player.Chips
 
 function randomCard(){
     let randomCard = Math.floor(Math.random() * 13) + 1
@@ -86,10 +89,6 @@ function startGame(){
     let sum = firstCard + secondCard
     renderGame()
 }
-
-
-
-
 
 function renderGame() {
     cardsEl.textContent = "Cards: "
@@ -119,4 +118,6 @@ function newCard(){
         renderGame()
     }
 }
+
+
 
