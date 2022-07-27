@@ -49,13 +49,12 @@ function multiply(){
 }
 
 
-//!fourthProject
+//fourthProject
 let player = {
     Name: "Yugal",
     Chips: 100
 }
 
-player.sayHello()
 
 let cards = []
 let sum = 0
